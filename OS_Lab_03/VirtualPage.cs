@@ -14,7 +14,6 @@ namespace OS_Lab_03
 
         public VirtualPage(Page page, string data, bool readOnly)
         {
-            Size = page.Size;
             Data = data != null ? data : page.Data;
             ReadOnly = readOnly;
             LastUsed = DateTime.Now;
@@ -35,8 +34,8 @@ namespace OS_Lab_03
 
         public override string ToString()
         {
-            return String.Format("Вирт. страница {0}; размер {1}; содержимое '{2}'; внешний ID {3}; ReadOnly {4}; время обр. {5};",
-                        Id, Size, Data, ExternalId, ReadOnly, LastUsed.Ticks);
+            return String.Format("Вирт. страница {0}; содержимое '{1}'; внешний ID {2}; ReadOnly {3}; время обр. {4};",
+                        Id, Data, ExternalId, ReadOnly, LastUsed.Ticks);
         }
     }
 }

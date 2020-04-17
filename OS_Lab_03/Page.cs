@@ -8,8 +8,6 @@ namespace OS_Lab_03
     {
         public int Id;
 
-        public int Size;
-
         public string Data;
     }
 }

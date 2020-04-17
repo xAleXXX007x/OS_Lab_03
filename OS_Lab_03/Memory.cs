@@ -10,6 +10,8 @@ namespace OS_Lab_03
 
         private List<Page> pages;
 
+        private const int pageSize = 5;
+
         public Memory(int size)
         {
             this.size = size;
@@ -18,7 +20,7 @@ namespace OS_Lab_03
 
         public void AddPage(Page page)
         {
-            if (page.Size > GetFreeSpace())
+            if (GetFreeSpace() < pageSize)
             {
                 throw new Exception("Недостаточно места для добавления страницы.");
             }
@@ -35,14 +37,7 @@ namespace OS_Lab_03
 
         public int GetSize()
         {
-            int size = 0;
-
-            foreach (Page page in pages)
-            {
-                size += page.Size;
-            }
-
-            return size;
+            return pages.Count * pageSize;
         }
 
         public int GetMaxSize()

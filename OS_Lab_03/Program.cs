@@ -8,11 +8,11 @@ namespace OS_Lab_03
         {
             MemoryManager memoryManager = new MemoryManager(100, 10);
 
-            memoryManager.AddPhysicalPage(new PhysicalPage(5, "Page 1"));
-            memoryManager.AddPhysicalPage(new PhysicalPage(5, "Page 2"));
-            memoryManager.AddPhysicalPage(new PhysicalPage(5, "Page 3"));
-            memoryManager.AddPhysicalPage(new PhysicalPage(5, "Page 4"));
-            memoryManager.AddPhysicalPage(new PhysicalPage(5, "Page 5"));
+            memoryManager.AddPhysicalPage(new PhysicalPage("Page 1"));
+            memoryManager.AddPhysicalPage(new PhysicalPage("Page 2"));
+            memoryManager.AddPhysicalPage(new PhysicalPage("Page 3"));
+            memoryManager.AddPhysicalPage(new PhysicalPage("Page 4"));
+            memoryManager.AddPhysicalPage(new PhysicalPage("Page 5"));
 
             memoryManager.LoadVirtualPage(0, "Some New Data");
             memoryManager.LoadVirtualPage(1, "Read Only Data", true);
